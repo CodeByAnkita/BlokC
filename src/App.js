@@ -1,5 +1,5 @@
 import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 /** Import All Components*/
 import Login from "./components/Login";
@@ -12,62 +12,28 @@ import Gardens from "./components/Gardens";
 import Home from "./components/Home";
 import Discover from "./components/Discover";
 import AddGarden from "./components/Add-Garden";
-
 import AddGardener from "./components/Add-Gardener";
+import PageNotFound from "./components/PageNotFound";
 
 /** Root Routes */
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Login></Login>,
-  },
-  {
-    path: "/navbar",
-    element: <Navbar></Navbar>,
-  },
-  {
-    path: "/swap",
-    element: <Swap></Swap>,
-  },
-  {
-    path: "/profile",
-    element: <Profile></Profile>,
-  },
-  {
-    path: "/notification",
-    element: <Notification></Notification>,
-  },
-  {
-    path: "/growth",
-    element: <Growth></Growth>,
-  },
-  {
-    path: "/gardens",
-    element: <Gardens></Gardens>,
-  },
-  {
-    path: "/home",
-    element: <Home></Home>,
-  },
-  {
-    path: "/discover",
-    element: <Discover></Discover>,
-  },
-  {
-    path: "/addgarden",
-    element: <AddGarden></AddGarden>,
-  },
-
-  {
-    path: "/addgardener",
-    element: <AddGardener></AddGardener>,
-  },
-]);
-
-export default function App() {
+function App() {
   return (
-    <main>
-      <RouterProvider route={router}></RouterProvider>
-    </main>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Login />} />
+        <Route exact path="/navbar" element={<Navbar />} />
+        <Route exact path="/addgardener" element={<AddGardener />} />
+        <Route exact path="/addgarden" element={<AddGarden />} />
+        <Route exact path="/discover" element={<Discover />} />
+        <Route exact path="/home" element={<Home />} />
+        <Route exact path="/gardens" element={<Gardens />} />
+        <Route exact path="/growth" element={<Growth />} />
+        <Route exact path="/notification" element={<Notification />} />
+        <Route exact path="/profile" element={<Profile />} />
+        <Route exact path="/swap" element={<Swap />} />
+        <Route exact path="/*" element={<PageNotFound />} />
+      </Routes>
+    </Router>
   );
 }
+export default App;
