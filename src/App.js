@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 /** Import All Components*/
 import Login from "./components/Login";
-import Navbar from "./components/Navbar";
+
 import Swap from "./components/Swap";
 import Profile from "./components/Profile";
 import Notification from "./components/Notification";
@@ -21,7 +21,7 @@ function App() {
     <Router>
       <Routes>
         <Route exact path="/" element={<Login />} />
-        <Route exact path="/navbar" element={<Navbar />} />
+
         <Route exact path="/addgardener" element={<AddGardener />} />
         <Route exact path="/addgarden" element={<AddGarden />} />
         <Route exact path="/discover" element={<Discover />} />

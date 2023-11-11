@@ -1,5 +1,11 @@
 import React from "react";
+import Navbar from "./Navbar";
 
 export default function Growth() {
-  return <div>Growth</div>;
+  return (
+    <div>
+      <Navbar />
+      Growth
+    </div>
+  );
 }
