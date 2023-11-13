@@ -9,6 +9,7 @@ import Back from '../icons/back.svg';
 import GardenList from'./GardenList';
 import Model from './Add-Garden';
 
+
 function Home() {
   const [showModel, setShowModel] = useState(false);
   return (
@@ -45,19 +46,38 @@ function Home() {
           Other Coins(8.64%)
          
           </div>
-          <div className="flex justify-evenly p-1 mx-0 "> <Link to="/AddGarden">
-          <img className="" src={AddGarden} alt="AddGarden" /></Link>
+          <div className="flex justify-evenly p-1 mx-0 "> 
+          <img className="" src={AddGarden} alt="AddGarden" />
           <Link to="/Swap"> <img  className=""src={Swap} alt="Swap" /></Link></div>
           <div className="flex justify-evenly p-1 ">
           <button className=" ml-5 text-[20px]" onClick={() => setShowModel(true)}>
-         
           Add Garden
           </button>
           <p className="mr-5 text-[20px]">
           Swap
           </p>
           </div>
-          <Model isvisible={showModel} onClose={()=>setShowModel(false)}/>
+          <Model isvisible={showModel} onClose={()=>setShowModel(false)}>
+          <div className="py-6 px-6 lg:px-8 text-left">
+        <h3 className="mb-4 text-xl font-medium text-black">Add New Garden</h3>
+        <div className="space-y-6" action="#">
+          <div>
+            <p>Garden Name </p>
+            <div className="bg-gray-50 border border-grey-300 text-black"></div>
+          </div>
+        </div>
+      </div>
+          </Model>
+         
+          <div className="py-6 px-6 lg:px-8 text-left">
+          <h3 className="mb-4 text-xl font-medium text-black">Add New Garden</h3>
+          <div className="space-y-6" action="#">
+            <div>
+              <p>Garden Name </p>
+              <div className="bg-gray-50 border border-grey-300 text-black"></div>
+            </div>
+          </div>
+        </div>
           </div>
           </div>
   {/**<div className="flex text-white text-2xl gap-3 ">
@@ -75,7 +95,7 @@ function Home() {
           </div>
         </Link>
       </div>
-  </div>*/}
+  </div>
  
 
       {/**After section */}
