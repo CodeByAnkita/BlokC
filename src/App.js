@@ -8,7 +8,7 @@ import Swap from "./components/Swap";
 import Profile from "./components/Profile";
 import Notification from "./components/Notification";
 import Growth from "./components/Growth";
-import Gardens from "./components/Gardens";
+import Gardens from "./components/GardensPage.js";
 import Home from "./components/Home";
 import Discover from "./components/Discover";
 import AddGarden from "./components/Add-Garden";

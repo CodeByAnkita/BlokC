@@ -59,7 +59,7 @@ const Login = () => {
         </div>
 
         {error && (
-          <div className="text-red-500">
+          <div className="text-[#C80202]">
             Please tick the checkbox to proceed.
           </div>
         )}
