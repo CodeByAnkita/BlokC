@@ -10,7 +10,7 @@ const Modal = () => {
 
   return (
     <>
-      <div className="flex justify-center p-3 mx-auto bg-indigo-700 rounded-xl md:max-w-4xl mt-10 text-white">
+      <div className="flex justify-center  mx-auto bg-indigo-700 rounded-xl md:max-w-4xl mt-10 text-white">
         <div className="p-8">
           <div className="text-4xl">Total Balance</div>
 
